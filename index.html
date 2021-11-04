@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Restaurant website template</title>
+  <meta charset="UTF-8">
+  <meta name="designer" content="Nima Jahanbakhshian">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+	<link rel="stylesheet" href="assets/css/all.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/lightbox.min.css">
+	<script src="assets/js/jquery.min.js"></script>
+  <!-- [if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <![endif] -->
+</head>
+
+<body id="home">
+  <div class="container-fluid">
+
+    <!-- section one start -->
+    <nav>
+      <div class="top-nav">
+
+        <div class="left-nav">
+          <i class="fa fa-envelope fa-fw"></i>
+          <a href="mailto:info@example.com">info@example.com</a>
+          <i class="fa fa-phone fa-fw"></i>
+          <a href="tel:5551237495">+555 123 7495</a>
+        </div>
+
+        <div class="right-nav">
+          <button class="btn-reg" id="btn-reg"><i class="fa fa-user-plus fa-fw"></i> Register</button>
+          <button id="sign-in-btn"><i class="fa fa-lock fa-fw"></i> Sign In</button>
+        </div>
+
+
+        <!-- The Modal  for register-->
+        <div id="modal-reg" class="modal-reg">
+          <!-- Modal Content -->
+          <form class="modal-content animate" action="#" method="POST">
+            <span class="close" title="Close">&times;</span>
+            <div>
+              <img src="assets/images/avatar.jpg" alt="Avatar" class="form-img">
+            </div>
+            <input type="text" placeholder="Enter Your Full Name" id="full-reg" class="form-control" required autofocus>
+            <input type="email" placeholder="Enter Your Email" id="email-reg" class="form-control" required>
+            <input type="password" placeholder="Enter Password" id="pass-reg" class="form-control" required>
+            <input type="password" placeholder="Repeat Password" id="re-pass-reg" class="form-control" required>
+
+            <div>
+              <button type="submit" class="btn btn-submit">Register</button>
+              <button type="button" class="btn cancel-btn">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- The Modal form sign in -->
+        <div id="modal" class="modal">
+          <!-- Modal Content-->
+          <form class="modal-content animate" action="#" method="POST">
+            <span class="close" title="Close">&times;</span>
+            <div>
+              <img src="assets/images/avatar.jpg" alt="Avatar" class="form-img">
+            </div>
+            <input type="text" placeholder="Enter Username" id="uname" class="form-control" required>
+
+            <input type="password" placeholder="Enter Password" id="psw" class="form-control" required>
+            <div>
+              <button type="submit" class="btn btn-submit">Login</button>
+              <button type="button" class="btn cancel-btn">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+      </div> <!-- /.top-nav -->
+
+      <img src="assets/images/menu.png" alt="X" class="menu-icon">
+
+      <div class="nav">
+        <a href="#home" class="active">HOME</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#menu">MENU</a>
+        <a href="#chefs">OUR CHEFS</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#contact">CONTACT US</a>
+      </div> <!-- /.nav -->
+
+    </nav> <!-- /navigation bar -->
+
+    <header>
+      <div class="hero-text">
+        <h1>Welcome to Our Restaurant</h1>
+        <a href="#about" class="btn btn-read">Read more</a>
+        <a href="#contact" class="btn btn-submit">Contact us</a>
+      </div>
+    </header> <!-- /header -->
+
+    <div class="about" id="about">
+      <h2>ABOUT US</h2>
+      <div class="section-content">
+        <h3>Who We Are</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit incidunt tenetur error odio qui alias velit
+          blanditiis voluptate labore facilis, deserunt ipsa, quis repellendus reiciendis nostrum porro assumenda!
+          Dolorum
+          autem ipsa adipisci explicabo sapiente soluta repudiandae, id atque facere pariatur reprehenderit accusantium
+          officiis tenetur quisquam hic reiciendis mollitia culpa in.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit incidunt tenetur error odio qui alias velit
+          blanditiis voluptate labore facilis, deserunt ipsa, quis repellendus reiciendis nostrum porro assumenda!
+          Dolorum
+          autem ipsa adipisci explicabo sapiente soluta repudiandae, id atque facere pariatur reprehenderit accusantium
+          officiis tenetur quisquam hic reiciendis mollitia culpa in.
+        </p>
+      </div>
+      <img src="assets/images/about1.jpg" alt="about-one" class="img-about">
+      <img src="assets/images/about2.jpg" alt="about-two" class="img-about">
+    </div> <!-- /.about -->
+
+    <!-- section one end -->
+
+    <!-- section two start-->
+
+    <div class="menu" id="menu">
+      <h2>OUR MENU</h2>
+      <div class="tab">
+        <p class="tab-links" onclick="openmenu(event, 'Breakfast')">breakfast</p>
+        <p class="tab-links" onclick="openmenu(event, 'Lunch')">lunch</p>
+        <p class="tab-links" onclick="openmenu(event, 'Dinner')">dinner</p>
+      </div>
+
+      <div id="Breakfast" class="tab-content visible">
+
+        <div class="card-container">
+          <div class="card">
+            <img src="assets/images/food-menu/Breakfast/Breakfast-Complete.jpg" alt="Breakfast-Complete">
+            <div class="card-content">
+              <h3>Breakfast Complete</h3>
+              <p>
+                Salmon fillet in a rich red curry with coconut milk, sweet basil leaves ,pea aubergine, and kaffir lime
+                leaves
+              </p>
+              <span>$25.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Breakfast/french-toast.jpg" alt="French-Toast">
+            <div class="card-content">
+              <h3>French Toast</h3>
+              <p>
+                The famous hot, sour and spicy thai soup with king prawn, shimeji mushrooms, lemongrass, and lime leaf
+              </p>
+              <span>$15.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Breakfast/Vegetarian-Breakfast.jpg" alt="Vegetarian-Breakfast">
+            <div class="card-content">
+              <h3>Vegetarian Breakfast</h3>
+              <p>
+                Stir fried king prawn, tender stem broccoli and asparagus with oyster sauce. Deep-fried mince prawn
+              </p>
+              <span>$10.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Breakfast/eggs-benedict.jpg" alt="Eggs-Benedict">
+            <div class="card-content">
+              <h3>Eggs Benedict</h3>
+              <p>
+                Grill sirloin beef with cracked black pepper. Served with green salad and sweet and sour sauce on the
+                side
+              </p>
+              <span>$20.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Breakfast/English-Breakfast.jpg" alt="English-Breakfast">
+            <div class="card-content">
+              <h3>English Breakfast</h3>
+              <p>
+                Tender stem broccoli and asparagus with oyster sauce. Stir fried king prawn. Lime mousse with mango
+                ganache
+              </p>
+              <span>$19.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Breakfast/Barrels-Breakfast.jpg" alt="Barrels-Breakfast">
+            <div class="card-content">
+              <h3>Barrel's Breakfast</h3>
+              <p>
+                With chopped vegetables, served with plum sauce. Tossed in peppercorns and spiced salt
+              </p>
+              <span>$14.0</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="Lunch" class="tab-content">
+
+        <div class="card-container">
+          <div class="card">
+            <img src="assets/images/food-menu/Lunch/shrimp-and-grits.jpeg" alt="Shrimp-and-Grits">
+            <div class="card-content">
+              <h3>Shrimp and Grits</h3>
+              <p>
+                With peppercorns and spiced salt, delicately battered. Tossed in peppercorns and spiced salsa
+              </p>
+              <span>$20.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Lunch/She-Crab-Soup.JPG" alt="She-Crab-Soup">
+            <div class="card-content">
+
+              <h3>She Crab Soup</h3>
+              <p>
+                Stir fried king prawn, tender stem broccoli and asparagus with oyster sauce. Deep-fried mince prawn
+              </p>
+              <span>$16.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Lunch/Lobster-Roll.jpg" alt="Lobster-Roll">
+            <div class="card-content">
+              <h3>Lobster Roll</h3>
+              <p>
+                Tender stem broccoli and asparagus with oyster sauce. Stir fried king prawn. Lime mousse with mango
+                ganache
+              </p>
+              <span>$23.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Lunch/Black-Bean-Soup.jpg" alt="Black-Bean-Soup">
+            <div class="card-content">
+              <h3>Black Bean Soup</h3>
+              <p>
+                Grill boneless corn-fed chicken, marinated in coconut milk, lemongrass, galangal, turmeric and lime
+                leaves
+              </p>
+              <span>$18.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Lunch/Fried-Chicken-Breast.jpg" alt="Fried-Chicken-Breast">
+            <div class="card-content">
+              <h3>Fried Chicken Breast</h3>
+              <p>
+                The famous hot, sour and spicy thai soup with king prawn, shimeji mushrooms, lemongrass, and lime leaf
+              </p>
+              <span>$15.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Lunch/Spring-Salad.jpg" alt="Spring-Salad">
+            <div class="card-content">
+              <h3>Spring Salad</h3>
+              <p>
+                Salmon fillet in a rich red curry with coconut milk, sweet basil leaves ,pea aubergine, and kaffir lime
+                leaves
+              </p>
+              <span>$10.0</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="Dinner" class="tab-content">
+
+        <div class="card-container">
+          <div class="card">
+            <img src="assets/images/food-menu/Dinner/butter-poached-lobster.jpg" alt="Butter-Poached-Lobster">
+            <div class="card-content">
+              <h3>Butter Poached Lobster</h3>
+              <p>
+                Grill sirloin beef with cracked black pepper. Served with green salad and sweet and sour sauce on the
+                side
+              </p>
+              <span>$5.0</span>
+
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Dinner/Peach-Gazpacho.jpg" alt="Peach-Gazpacho">
+            <div class="card-content">
+              <h3>Peach Gazpacho</h3>
+              <p>
+                The famous hot, sour and spicy thai soup with king prawn, shimeji mushrooms, lemongrass, and lime leaf
+              </p>
+              <span>$16.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Dinner/Pork-Belly.jpg" alt="Pork-Belly">
+            <div class="card-content">
+              <h3>Pork Belly</h3>
+              <p>
+                Salmon fillet in a rich red curry with coconut milk, sweet basil leaves ,pea aubergine, and kaffir lime
+                leaves
+              </p>
+              <span>$25.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Dinner/Wood-Roasted-Salmon.jpg" alt="Wood-Roasted-Salmon">
+            <div class="card-content">
+              <h3>Wood Roasted Salmon</h3>
+              <p>
+                Stir fried king prawn, tender stem broccoli and asparagus with oyster sauce. Deep-fried mince prawn
+              </p>
+              <span>$22.0</span>
+
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Dinner/Mixed-Greens-Salad.jpg" alt="Mixed-Greens-Salad">
+            <div class="card-content">
+              <h3>Mixed Greens Salad</h3>
+              <p>
+                With peppercorns and spiced salt, delicately battered. Tossed in peppercorns and spiced salsa
+              </p>
+              <span>$15.0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/images/food-menu/Dinner/Caesar-Salad.jpg" alt="Caesar-Salad">
+            <div class="card-content">
+              <h3>Caesar Salad</h3>
+              <p>
+                With chopped vegetables, served with plum sauce. Tossed in peppercorns and spiced salt
+              </p>
+              <span>$18.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /.menu -->
+
+    <!-- section two end-->
+
+    <!-- section three start -->
+
+    <div class="clients">
+      <h2>OUR CLIENTS</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, odio.
+      </p>
+      <a href="#"><img src="assets/images/client-one.png" alt="client-one"></a>
+      <a href="#"><img src="assets/images/client-two.jpg" alt="client-two"></a>
+      <a href="#"><img src="assets/images/client-four.jpg" alt="client-four"></a>
+    </div>
+
+
+    <div class="chefs" id="chefs">
+      <h2>OUR CHEFS</h2>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="assets/images/Martin-Smith.jpg" alt="Martin-Smith">
+          <div class="card-content">
+            <h3>Martin Smith</h3>
+            <p>Sales exclusive</p>
+            <i class="fa fa-envelope fa-fw"></i>
+            <a href="mailto:Martin@example.com">Martin@example.com</a> <br>
+            <i class="fa fa-phone fa-fw"></i>
+            <a href="tel:5551237495">+555 456 7532</a>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <img src="assets/images/Alice-Williams.jpg" alt="Alice-Williams">
+          <div class="card-content">
+            <h3>Alice Williams</h3>
+            <p>Head chef</p>
+            <i class="fa fa-envelope fa-fw"></i>
+            <a href="mailto:Alice@example.com">Alice@example.com</a> <br>
+            <i class="fa fa-phone fa-fw"></i>
+            <a href="tel:5551237495">+555 258 3214</a>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <img src="assets/images/Michael-Bean.jpg" alt="Michael-Bean">
+          <div class="card-content">
+            <h3>Michael Bean</h3>
+            <p>Cook</p>
+            <i class="fa fa-envelope fa-fw"></i>
+            <a href="mailto:Michael@example.com">Michael@example.com</a> <br>
+            <i class="fa fa-phone fa-fw"></i>
+            <a href="tel:5551237495">+555 683 7925</a>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /.chefs -->
+
+    <!-- section three end -->
+
+    <!-- section four start -->
+
+    <div class="deal">
+      <div class="deal-content">
+        <h2>HOT Deal of the Day</h2>
+        <div>
+          <p>
+            tenetur dolor eius ab, porro cumque aspernatur sed deleniti inventore enim aperiam eos quisquam. Ipsam,
+            dolorem. Doloremque earum quos omnis totam eius ex, eaque, iure, laudantium assumenda eveniet quis
+            distinctio
+            molestias enim.
+            dolorem. Doloremque earum quos omnis totam eius ex, eaque, iure, laudantium assumenda.
+          </p>
+        </div>
+        <button id="order" class="btn btn-order">ORDER NOW</button>
+      </div>
+
+    </div> <!-- /.deal -->
+
+    <div class="gallery" id="gallery">
+      <h2>FOOD GALLERY</h2>
+      <div class="gallery-pic">
+
+        <a href="assets/images/one.jpg" target="_blank" data-lightbox="food-gallery" data-title="our food gallery">
+          <img src="assets/images/one.jpg" alt="one">
+        </a>
+
+        <a href="assets/images/two.jpg" target="_blank" data-lightbox="food-gallery" data-title="our food gallery">
+          <img src="assets/images/two.jpg" alt="two">
+        </a>
+
+        <a href="assets/images/three.jpg" target="_blank" data-lightbox="food-gallery" data-title="our food gallery">
+          <img src="assets/images/three.jpg" alt="three">
+        </a>
+
+        <a href="assets/images/four.jpg" target="_blank" data-lightbox="food-gallery" data-title="our food gallery">
+          <img src="assets/images/four.jpg" alt="four">
+        </a>
+
+        <a href="assets/images/five.jpg" target="_blank" data-lightbox="food-gallery" data-title="our food gallery">
+          <img src="assets/images/five.jpg" alt="five">
+        </a>
+
+        <a href="assets/images/six.jpg" target="_blank" data-lightbox="food-gallery" data-title="our food gallery">
+          <img src="assets/images/six.jpg" alt="six">
+        </a>
+
+        <a href="assets/images/seven.jpg" target="_blank" data-lightbox="food-gallery" data-title="our food gallery">
+          <img src="assets/images/seven.jpg" alt="seven">
+        </a>
+
+        <a href="assets/images/eight.jpg" target="_blank" data-lightbox="food-gallery" data-title="our food gallery">
+          <img src="assets/images/eight.jpg" alt="eight">
+        </a>
+
+      </div>
+    </div> <!-- /.gallery -->
+
+    <div class="contact" id="contact">
+      <h2>CONTACT US</h2>
+      <div class="form-container">
+        <form action="#" method="POST">
+
+          <div class="form-group">
+            <input type="text" id="fullname" class="form-control" placeholder="Your Full Name" required>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+          </div>
+
+          <div class="form-group">
+            <input type="tel" id="tel" class="form-control" placeholder="Your phone Number" required>
+          </div>
+
+          <div class="form-group">
+            <textarea id="msg" cols="30" rows="10" class="form-control" required placeholder="Your Message"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-submit form-control">Send Message</button>
+
+        </form>
+      </div>
+    </div>
+    <!-- section four end -->
+
+    <!-- section five start -->
+    <footer>
+      <div class="top-footer">
+        <div class="flex-container">
+          <div class="information">
+            <h3>Address</h3>
+            <ul>
+              <li class=".information-items">
+                <i class="fa fa-envelope fa-fw fa-lg"></i> <a href="mailto:example@info.com">exampl@info.com</a>
+              </li>
+              <li class=".information-items">
+                <i class="fa fa-phone fa-fw fa-lg"></i> <a href="tel:919-780-0715">919-780-0715</a>
+              </li>
+              <li class=".information-items">
+                <i class="fa fa-location-arrow fa-fw fa-lg"></i>sanandaj shalman street
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-us">
+            <h3>About Us</h3>
+            <p>
+              Voluptas sequi ipsam nihil corporis minima, <br>
+              commodi ut dolorem ipsum qui architecto ex. <br>
+              Exercitationem cupiditate facere atque.sequi nihil.
+            </p>
+          </div>
+
+          <div class="social-media">
+            <h3>Social Media</h3>
+            <a href="#" class="fab fa-facebook" title="facebook"></a>
+            <a href="#" class="fab fa-twitter" title="twitter"></a>
+            <a href="#" class="fab fa-pinterest" title="pinterest"></a>
+            <a href="#" class="fab fa-github" title="github"></a>
+          </div>
+        </div>
+      </div>
+    </footer> <!-- /footer -->
+    <!-- section five end -->
+
+    <a href="#home" class="up" onclick="topFunction()" id="myBtn" title="Go to top">
+      <img src="assets/images/up.png" alt="^">
+    </a>
+
+  </div> <!-- /.container -->
+	
+  <script src="assets/js/lightbox.min.js"></script>
+	<script src="assets/js/script.js"></script>
+	<noscript>your browser does not supported the javascript!!</noscript>
+</body>
+
+</html>
