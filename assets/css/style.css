@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-/* basic style */
-/* section one style start*/
 @font-face {
   font-family: "bad script";
   src: url("../webfonts/bad-script/BadScript-Regular.ttf");
@@ -21,8 +19,8 @@
 html {
   font-size: 100%;
   font-family: sans-serif;
-  scroll-behavior: smooth;
   line-height: 1.15;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -100,8 +98,6 @@ h3 {
   font-size: 2rem;
 }
 
-/* end basic style */
-/* navigation */
 .top-nav {
   display: flex;
   color: #fff;
@@ -240,7 +236,6 @@ h3 {
   display: none;
 }
 
-/* header style */
 header {
   background-color: azure;
   background-image: url("../images/banner.jpg");
@@ -311,7 +306,6 @@ header .btn {
   width: auto;
 }
 
-/* section one style end*/
 /* section two start */
 .tab-links {
   cursor: pointer;
@@ -385,7 +379,6 @@ header .btn {
   padding: 2px 16px;
 }
 
-/* section two end */
 /* section three start */
 /* clients style */
 .clients {
@@ -423,7 +416,6 @@ header .btn {
   border-radius: 50%;
 }
 
-/* section three end */
 /* section four start */
 /* deal style */
 .deal {
@@ -513,7 +505,6 @@ header .btn {
   margin-bottom: 20px;
 }
 
-/* section four end */
 /* section five start */
 /* footer style */
 footer {
@@ -623,9 +614,7 @@ footer {
   opacity: 1;
 }
 
-/* section five end */
 /* media query */
-
 @keyframes fadeEffect {
   from {
     opacity: 0;

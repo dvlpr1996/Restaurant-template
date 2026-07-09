@@ -16,7 +16,7 @@ function openmenu(event, menuname) {
   event.currentTarget.className += " active";
 }
 
-//go to top 
+//go to top
 let mybutton = document.getElementById("myBtn");
 
 window.onscroll = function () {
@@ -35,7 +35,6 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
 
 //navigation bar
 $(".menu-icon").click(function () {
@@ -97,5 +96,4 @@ $("#order").click(function () {
   else {
     $("#modal").css({ 'display': 'none' });
   }
-
 });
